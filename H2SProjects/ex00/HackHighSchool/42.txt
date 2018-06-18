@@ -1,0 +1,6 @@
+cd - change directories by path or folder name
+touch - make file with entered name
+vim - edit text files in command line
+:w - write/save file
+:q - exit file (if alone, doesn't save)
+
