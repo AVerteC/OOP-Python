@@ -1,4 +1,6 @@
 class FirstClass:
 
-    def __init__(self):
-        print("Hello World")
+    #def __init__(self):
+
+        def welcome(self):
+            print("Hello World")

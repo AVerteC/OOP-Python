@@ -1,7 +1,9 @@
-from first_name import FirstClass
+from first_class import FirstClass
 
 
 class SecondClass(FirstClass):
-    FirstClass.greeting(name="alanchen")
+
+    def __init__(self):
+        super().greeting("alanchen")
 
 
