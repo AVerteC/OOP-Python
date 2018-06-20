@@ -25,3 +25,6 @@ class SinglyList(object):
         else:
             node.next = self.head
             self.head = node
+    @property
+    def print_list(self, list_head):
+        print(list_head.next)
