@@ -10,3 +10,6 @@ class LinkBuilder():
         for x in range(0, 10):
             print("creating node " + str(x))
             sl.add_head(Node(x))
+            print(sl.head)
+            print(sl)
+
