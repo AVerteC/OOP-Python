@@ -2,6 +2,10 @@ class SinglyList(object):
     def __init__(self):
         self.h = None
 
+    def print_list(self,list_head):
+        print(SinglyList.head)
+        print(SinglyList.__iter__(self))
+
     def __iter__(self):
         current = self.head
         while current:
@@ -25,3 +29,4 @@ class SinglyList(object):
         else:
             node.next = self.head
             self.head = node
+
