@@ -13,10 +13,26 @@ class SinglyList(object):
         if list_head is None:
             list_head = endNode
             return
-        lastNode = list_head
-        while(lastNode.next):
-            lastNode = lastNode.next
-        lastNode.next = endNode
+        LastNode = list_head
+        while LastNode.next:
+            LastNode = LastNode.next
+        LastNode.next = endNode
+
+    def remove(self, list_head, val):
+        if list_head is not None:
+            if list_head == val:
+                list_head = list_head.next
+                list_head = None
+                return
+        while list_head is not None:
+            if list_head.content == val:
+                break
+            back = list_head
+            list_head = list_head.next
+
+        if list_head is None:
+            return
+        back.next = list_head.next
 
     def __iter__(self):
         current = self.head
