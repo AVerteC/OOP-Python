@@ -1,36 +1,46 @@
+from node_nerf import Node
 class Stack:
-    def __init__(self, top):
-        self.top = top
-        self.size = 0
-        self.next = None
+    def __init__(self):
+        self.top = None
+        self._size = 0
 
+    @property
     def isEmpty(self):
         if self.top is None:
             return True
         return False
 
     def push(self, data):
-        self.next = self.top
-        self.top = data
-        self.size += 1
+        # brand new top's next is the current top
+        if self.size is None:
+            tNode = Node(data)
+            self.top = tNode
+            self._size += 1
+        cNode = Node(data)
+        cNode.next = self.top
+        self.top = cNode
+        self._size += 1
 
+    @property
     def pop(self):
         if self.top is None:
             return None
-        self.top = self.next
-        self.size -= 1
+        self.top.data = self.next.data
+        self._size -= 1
 
+    @property
     def peek(self):
-        if self.top is None:
+        if self.top.data is None:
             return None
-        return self.top
+        return self.top.data
 
+    @property
     def size(self):
-        return self.size
+        return self._size
 
     def __str__(self):
-        output = ""
+        fullstr = ""
         while self.top is not None:
-            output += str(self.top.peek) + ", "
+            fullstr += str(self.top.data) + " "
             self.top = self.top.next
-        print(output)
+        return fullstr

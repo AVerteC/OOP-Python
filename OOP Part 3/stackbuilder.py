@@ -4,15 +4,11 @@ from node_nerf import Node
 if __name__ == "__main__":
 
     #print("creating head of list")
-    sl = Stack(10)
-
+    st = Stack()
+    print("testing")
     for x in range(4):
-        sl.push(x)
-    print(sl)
-    print(" ")
-    sl.push(20)
-    print(" ")
-    print(sl)
-    print(" ")
-    sl.pop(20)
-    print(sl)
+        print("making stack block: " + str(x))
+        st.push(x)
+    #print(st.size)
+    #print(str(st.isEmpty))
+    print(st)
