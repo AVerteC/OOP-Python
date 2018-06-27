@@ -25,12 +25,12 @@ class Stack:
     def pop(self):
         if self.top is None:
             return None
-        self.top.data = self.next.data
+        self.top = self.top.next
         self._size -= 1
 
     @property
     def peek(self):
-        if self.top.data is None:
+        if self.top is None:
             return None
         return self.top.data
 
