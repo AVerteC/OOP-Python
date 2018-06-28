@@ -13,10 +13,10 @@ if __name__ == "__main__":
 
     # emptiness test
     print("empty? " + str(q.isEmpty))
-    print(q)
-    print("front " + str(q.front))
-    #print(q.front.next)
-    print("back " + str(q.back))
+    print(str(q))
+    # print("front " + str(q.front))
+    # print(q.front.next)
+    # print("back " + str(q.back))
     # dqueue test
-    q.dequeue()
-    print(q)
+    # q.dequeue()
+    # print(str(q))

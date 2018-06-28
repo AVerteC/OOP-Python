@@ -1,7 +1,8 @@
 from node_nerf import Node
 
+
 class Queue:
-    def __init__(self, front=None ):
+    def __init__(self, front=None):
         self.front = front
         self.back = None
         self._size = 0
@@ -21,7 +22,8 @@ class Queue:
             self._size += 1
         else:
             cNode = Node(data)
-            cNode.next = self.front
+            self.front.next = cNode
+            self.back.next = cNode
             self.back = cNode
             self._size += 1
 
@@ -38,10 +40,11 @@ class Queue:
     def size(self):
         return self._size
 
-    @property
     def __str__(self):
         fullstr = ""
         while self.front is not None:
             fullstr += str(self.front.data) + " "
+            print(self.front)
             self.front = self.front.next
+            print(self.front)
         return fullstr
