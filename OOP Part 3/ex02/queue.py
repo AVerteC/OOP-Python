@@ -22,7 +22,6 @@ class Queue:
             self._size += 1
         else:
             cNode = Node(data)
-            self.front.next = cNode
             self.back.next = cNode
             self.back = cNode
             self._size += 1
@@ -44,7 +43,7 @@ class Queue:
         fullstr = ""
         while self.front is not None:
             fullstr += str(self.front.data) + " "
-            print(self.front)
+            # print(self.front)
             self.front = self.front.next
             print(self.front)
         return fullstr
