@@ -29,7 +29,7 @@ class Queue:
     # remove item
 
     def dequeue(self):
-        self.back = self.front.next
+        self.front = self.front.next
         self._size -= 1
 
     def front(self):
