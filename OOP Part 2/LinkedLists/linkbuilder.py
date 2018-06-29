@@ -6,7 +6,7 @@ if __name__ == "__main__":
     #print("creating head of list")
     sl = SinglyList()
 
-    for x in range(4):
+    for x in range(3):
         sl.add_head(Node(x))
     sl.print_list(sl.head)
     print(" ")
